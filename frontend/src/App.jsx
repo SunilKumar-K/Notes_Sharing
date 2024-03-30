@@ -1,14 +1,26 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline text-gray-700">
-        Start Learning
-      </h1>
-    </>
+    <div>
+        {/* navbar */}
+        <div>
+          <p>Navbar</p>
+        </div>
+
+        {/* content */}
+        <div>
+          <Outlet />
+        </div>
+
+        {/* footer */}
+        <div>
+          <p>Footer</p>
+        </div>
+    </div>
   )
 }
 
